@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chatset="utf-8">
+		<title>PyChat</title>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/chat_login.js') }}"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#wrapp {
+				width: 500px;
+				margin: auto;
+				padding: 0;
+			}
+		</style>
+
+		<div id="wrapp">
+			Enter your nickname:
+			<input id="username" />
+			<button id="butLogin">LogIn</button>
+		</div>
+	</body>
+</html>

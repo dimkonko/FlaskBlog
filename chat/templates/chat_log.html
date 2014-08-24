@@ -1,0 +1,38 @@
+<div>
+	
+</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chatset="utf-8">
+		<title>PyChat</title>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/chat.js') }}"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#wrapp {
+				width: 500px;
+				margin: auto;
+				padding: 0;
+			}
+			#msg_log {
+				width: 100%;
+			}
+			#msg_input {
+				width: 70%;
+			}
+			#send_msg {
+				width: 27%;
+				float: right;
+			}
+		</style>
+
+		<div id="wrapp">
+			<textarea id="msg_log" rows="10" readonly></textarea>
+			<input id="msg_input" name="{{ name }}"class="inputs" type="text" />
+			<button id="send_msg" class="inputs">Send</button>
+		</div>
+	</body>
+</html>
