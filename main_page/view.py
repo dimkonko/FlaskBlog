@@ -5,7 +5,7 @@ main_page = Blueprint("main_page", __name__,
 
 @main_page.route("/home")
 def lol():
-    return render_template("index.html")
+    return render_template("blog.html")
 
 @main_page.route("/about")
 def about():
