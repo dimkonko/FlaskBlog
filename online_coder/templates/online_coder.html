@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>Online coder</title>
+
+		<!-- Libs -->
+		<script type="text/javascript" src="static/js/libs/ace/ace.js"></script>
+
+		<!-- Main -->
+		<script type="text/javascript" src="static/js/online_coder.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#editor {
+				width: 640px;
+				height: 400px;
+				float: left;
+				resize: both;
+			}
+            #settings {
+                float: left;
+                margin: 0 10px;
+            }
+		</style>
+		<div id="editor"></div>
+		<div id="settings">
+		    Theme:
+    		<select id="themes_list">
+    		    {% for theme in themes_list %}
+                <option value="{{ theme }}">{{ theme }}</option>
+                {% endfor %}
+            </select>
+		    <br>Language:
+    		<select id="lang_list">
+    		    {% for lang in lang_list %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select>
+            <br><button id="zoomInBut">Zoom In</button>
+            <button id="zoomOutBut">Zoom Out</button>
+        </div>
+	</body>
+</html>

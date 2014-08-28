@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<meta chatset="utf-8" />
+		<title>Add Post</title>
+	</head>
+	<body>
+		<style type="text/css">
+			#descr {
+				height: 100px;
+			}
+			.field {
+				width: 300px;
+				margin: 10px 0;
+			}
+		</style>
+		<form method="POST">
+			Title:
+			<br><input type="text" id="title" class="field" />
+			<br>Description:
+			<br><textarea type="text" id="descr" class="field"></textarea>
+			<br>Template name:
+			<br><input type="text" id="template_name" class="field"/>
+			<br><button id="add_post" type="submit">Add</button>
+		</form>
+	</body>
+</html>
