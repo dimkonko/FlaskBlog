@@ -12,5 +12,6 @@ def load():
         themes_list - list of themes stored on server
         dti - default theme index
     """
-    return render_template("online_coder.html", themes_list=model.themes_list,
-                           lang_list=model.lang_list)
+    return render_template("online_coder.html",
+                           themes_list=model.get_themes_list(),
+                           lang_list=model.get_lang_list())

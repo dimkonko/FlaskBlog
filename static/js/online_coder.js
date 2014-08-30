@@ -3,6 +3,7 @@ window.onload = function() {
     var lang_list = document.getElementById("lang_list");
     var zoomInBut = document.getElementById("zoomInBut"),
         zoomOutBut = document.getElementById("zoomOutBut");
+    var saveBut = document.getElementById("saveBut");
 
     var default_font_size = 14,
         font_size = default_font_size,
@@ -10,11 +11,22 @@ window.onload = function() {
         MIN_FONT_SIZE = 8,
         MAX_FONT_SIZE = 40;
 
+    var editor_div = document.getElementById("editor");
     var editor = ace.edit("editor");
-    editor.setFontSize(default_font_size);
+
+
 
     setSelectedTheme();
     setSelectedLang();
+
+    saveBut.onclick = function() {
+        var lang_name = lang_list.options[lang_list.selectedIndex].text;
+        var lang_ext = lang_list.options[lang_list.selectedIndex].value;
+        var text = editor.getSession().getValue();
+        var blob = new Blob([text], {type: "text/" +
+            lang_name + "; charset=utf-8"});
+        saveAs(blob, "exported_file." + lang_ext);
+    }
 
     zoomInBut.onclick = function() {
         if(font_size < MAX_FONT_SIZE)

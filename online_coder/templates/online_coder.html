@@ -6,6 +6,7 @@
 
 		<!-- Libs -->
 		<script type="text/javascript" src="static/js/libs/ace/ace.js"></script>
+		<script type="text/javascript" src="static/js/libs/FileSaver.js"></script>
 
 		<!-- Main -->
 		<script type="text/javascript" src="static/js/online_coder.js"></script>
@@ -33,12 +34,13 @@
             </select>
 		    <br>Language:
     		<select id="lang_list">
-    		    {% for lang in lang_list %}
-                <option value="{{ lang }}">{{ lang }}</option>
+    		    {% for item in lang_list %}
+                <option value="{{ item.lang_ext }}">{{ item.lang }}</option>
                 {% endfor %}
             </select>
             <br><button id="zoomInBut">Zoom In</button>
             <button id="zoomOutBut">Zoom Out</button>
+            <br><button id="saveBut">Save</button>
         </div>
 	</body>
 </html>
