@@ -3,6 +3,7 @@
 	padding: 0;
 }
 a {
+	color: #383838;
 	text-decoration: none;
 }
 
@@ -96,4 +97,10 @@ a {
 	margin: auto;
 	margin-top: 10px;
 	border-bottom: 1px solid #D1D1D1;
+}
+.post_read_more {	margin-top: 10px;
+	margin-left: 15px;
+}
+.post_read_more a {
+	text-decoration: underline;
 }
