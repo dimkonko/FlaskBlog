@@ -5,6 +5,11 @@
 		<title>dimkonko's blog</title>
 
 		<link rel="stylesheet" type="text/css" href="static/css/blog.css">
+		<link rel="stylesheet" type="text/css" href="static/css/modal.css">
+
+
+		<script type="text/javascript" src="static/js/lib/modal.js"></script>
+		<script type="text/javascript" src="static/js/main_page.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -13,6 +18,7 @@
 				<div id="top_menu">
 					<ul>
 						<li><a href="/">Home</a></li>
+						<li><a id="open_modal_but">Add Post</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="#">Contacts</a></li>
 					</ul>
@@ -37,6 +43,18 @@
 			<!-- End of main -->
 		</div>
 		<!-- End of wrapper -->
+
+		<div id="main_modal" class="modal_div">
+			<form method="POST" action="">
+					Title:
+					<br><input type="text" name="title" class="field" />
+					<br>Description:
+					<br><textarea type="text" name="descr" class="field"></textarea>
+					<br>Template name:
+					<br><input type="text" name="link" class="field"/>
+					<br><button type="submit">Add</button>
+				</form>
+		</div>
 
 		<div id="bg">
 			<img src="static/img/bg.jpg" alt=""></img>

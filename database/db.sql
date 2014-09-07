@@ -6,3 +6,10 @@ CREATE TABLE post (
     date DATE NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE users (
+	id INT NOT NULL AUTO_INCREMENT,
+	f_name VARCHAR(100) NOT NULL,
+	l_name VARCHAR(100) NOT NULL,
+	PRIMARY KEY(id)
+)

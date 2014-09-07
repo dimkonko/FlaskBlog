@@ -1,9 +1,18 @@
 import MySQLdb as mdb
 
+from custom_modules.ConfigLoader import ConfigLoader
+
 class MainModel(object):
+    def __init__(self):
+        config = ConfigLoader("conf/db_conf.ini").load()
+        self.host = config["host"]
+        self.user = config["user"]
+        self.passwd = config["passwd"]
+        self.db = config["db"]
+
     def conn(self):
-        return mdb.connect(host="mysql.server", user="dimkonko",
-                           passwd="dblog", db="dimkonko$BlogDb")
+        return mdb.connect(host=self.host, user=self.user,
+                           passwd=self.passwd, db=self.db)
 
     def add_post(self, post_form):
         field_list = [val.encode('utf8') for k, val in post_form.iteritems()]
@@ -21,7 +30,6 @@ class MainModel(object):
         sql = "SELECT * FROM post"
         cursor.execute(sql)
         data_list = cursor.fetchall()
-        #new_list = [list(i) for i in data_list]
         db.close()
         return data_list
 
