@@ -11,7 +11,6 @@ The idea of this project is to create a website-business card in blog style to t
 
 
 To install MySQLdb:
-
  - sudo apt-get install python-dev
  - sudo apt-get install libmysqlclient-dev
  - pip install MySQL-python
