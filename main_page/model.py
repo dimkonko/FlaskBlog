@@ -15,12 +15,13 @@ class MainModel(object):
                            passwd=self.passwd, db=self.db)
 
     def add_post(self, post_form):
-        field_list = [val.encode('utf8') for k, val in post_form.iteritems()]
-        print field_list
+        for key, value in post_form.iteritems():
+            value = value.encode('utf8')
+        print post_form
 
         sql = "INSERT INTO post(title, descr, link, date) " +\
-              "VALUES('{0}', '{1}', '{2}', CURDATE());".format(field_list[0],
-                field_list[1], field_list[2])
+              "VALUES('{0}', '{1}', '{2}', CURDATE());".format(post_form["title"],
+                post_form["descr"], post_form["link"])
         self._execute_sql(sql)
         return True
 
