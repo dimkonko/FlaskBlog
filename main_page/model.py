@@ -1,10 +1,11 @@
+import sys
 import MySQLdb as mdb
 
 from custom_modules.ConfigLoader import ConfigLoader
 
 class MainModel(object):
     def __init__(self):
-        config = ConfigLoader("conf/db_conf.ini").load()
+        config = ConfigLoader(sys.path[0] + "/conf/db_conf.ini").load()
         self.host = config["host"]
         self.user = config["user"]
         self.passwd = config["passwd"]

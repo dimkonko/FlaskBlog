@@ -8,6 +8,8 @@ model = MainModel()
 
 @main_page.route("/")
 def index():
+    print "Data:"
+    print model.get_all()
     return render_template("blog.html", posts_list=model.get_all())
 
 @main_page.route("/about")
