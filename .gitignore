@@ -52,3 +52,12 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Custom
+# Temporary readme (bug or smth)
+README.md~
+
+# Db config
+db_conf.ini
+
+# Run file
+run.py
